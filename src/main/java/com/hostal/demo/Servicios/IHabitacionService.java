@@ -1,4 +1,21 @@
 package com.hostal.demo.Servicios;
 
-public interface IHabitacionService {
+
+import com.hostal.demo.Modelo.Habitacion;
+
+import java.util.List;
+
+public interface IHabitacionService{
+
+    List<Habitacion> buscarTodos();
+
+    void save(Habitacion habitacion);
+
+    List<Habitacion> buscarHabitaciones(Long id);
+
+    Habitacion buscarHabitacionPorId(Long id);
+
+    void borrarHabitacionPorId(Long id);
+
+    void listarEnOrden(List<Habitacion> Habitaciones);
 }
