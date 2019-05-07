@@ -17,5 +17,5 @@ public interface IHabitacionService{
 
     void borrarHabitacionPorId(Long id);
 
-    void listarEnOrden(List<Habitacion> Habitaciones);
+    void listarEnOrdenTipo(List<Habitacion> Habitaciones);
 }
