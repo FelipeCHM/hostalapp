@@ -1,13 +1,27 @@
 package com.hostal.demo.Modelo;
 
+import javax.persistence.Column;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+
 public class Huesped {
+    @Id
+    @Column(name = "Run")
+    @JoinColumn(name = "Run",referencedColumnName = "id_huesped",insertable = true)
     private Long run;
+    @Column(name = "digitoVerificador")
     private Character digitoVerificador;
+    @Column(name = "primerNombre")
     private String primerNombre;
+    @Column(name = "SegundoNombre")
     private String segundoNombre;
+    @Column(name = "apellidoPaterno")
     private String apellidoPaterno;
+    @Column(name = "apellidoMaterno")
     private String apellidoMaterno;
+    @Column(name = "correo")
     private String correo;
+    @Column(name = "telefono")
     private String telefono;
 
     public Huesped(Long run, Character digitoVerificador, String primerNombre, String segundoNombre, String apellidoPaterno, String apellidoMaterno, String correo, String telefono) {

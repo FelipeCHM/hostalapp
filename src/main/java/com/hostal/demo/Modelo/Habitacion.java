@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class Habitacion {
     @Id
     @Column(name = "id_habitacion")
+    @JoinColumn(name = "id_habitacion",referencedColumnName = "id_habitacion",insertable = true,nullable = true)
     private Long id_habitacion;
     @Column(name = "numero")
     private Long numero;
